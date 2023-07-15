@@ -1,0 +1,17 @@
+{
+    "serverConfig": {
+        "host": "127.0.0.1",
+        "port": 33002
+    },
+    "dbConfig": {
+        "host": "hostname",
+        "port": 3306,
+        "user": "username",
+        "password": "password",
+        "database": "db_name"
+    },
+    "jwtConfig": {
+        "secret": "jwt_secret",
+        "expiresIn": "12h"
+    }
+}
