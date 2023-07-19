@@ -11,8 +11,7 @@
 > 安装包下载地址：[nvm-windows](https://github.com/coreybutler/nvm-windows/releases)
 
 1.1 安装 nvm  
-  打开页面之后下载最新版本的 `nvm-setup.exe
-` ，然后运行安装程序。
+  打开页面之后下载最新版本的 `nvm-setup.exe` ，然后运行安装程序。
 
 1.2 配置 node 和 nvm 的 镜像源  
 nvm 安装完成后，在安装目录下找到 `settings.txt` 添加以下内容：
