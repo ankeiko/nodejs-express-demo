@@ -1,7 +1,7 @@
 {
     "serverConfig": {
         "host": "127.0.0.1",
-        "port": 33002
+        "port": 33001
     },
     "dbConfig": {
         "host": "hostname",
