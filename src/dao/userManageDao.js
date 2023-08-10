@@ -22,7 +22,7 @@ exports.getUserList = async () => {
             user_info
     `;
     return await db.select(sql);
-};
+};//导出用箭头函数的语法来定义的异步函数getUserList，使用SQL查询了 user_info 表中的所有字段，使用 db.select(sql) 方法执行查询，并将结果返回
 
 // 获取用户详细信息
 exports.getUserInfo = async (userId) => {
@@ -38,4 +38,4 @@ exports.getUserInfo = async (userId) => {
         userId
     ];
     return await db.select(sql, sqlParams);
-};
+};//导出用箭头函数的语法来定义的异步函数getUserInfo，使用SQL查询了 user_info 表中的所有字段，并使用 WHERE 子句来筛选出指定 user_id 的记录。使用 db.select(sql, sqlParams) 方法执行查询，并将结果返回
