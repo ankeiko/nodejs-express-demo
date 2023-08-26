@@ -33,7 +33,7 @@ app.use(require('./src/middleware/responseFormat'));
 
 
 // 路由规则
-app.use('/api/userManage', require('./src/route/userManageRoute'));
+app.use('/api/calendar', require('./src/route/calendarRoute'));
 
 
 
