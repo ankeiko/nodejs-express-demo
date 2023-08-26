@@ -11,17 +11,17 @@
 
 
 
-const userManageDao = require('../dao/userManageDao');//声明常数加载这个路径
+const userManageDao = require('../dao/calendarDao');//声明常数加载这个路径
 
 // 获取用户列表
-exports.getUserList = async () => {
-    const userList = await userManageDao.getUserList();
-    return userList;
+exports.getSchoolCalendar = async () => {
+    const calendar = await calendarDao.getSchoolCalendar();
+    return calendar;
 }//使用了箭头函数的语法来定义一个异步函数，调用 userManageDao.getUserList() 来获取用户列表数据，并将结果返回
 
 // 获取用户详细信息
-exports.getUserInfo = async (userId) => {
-    const userInfo = await userManageDao.getUserInfo(userId);
-    return userInfo;
+exports.getSchoolDate = async (date) => {
+    const SchoolDate = await calendarDao.getSchoolDate(date);
+    return SchoolDate;
 }//使用了箭头函数的语法来定义一个异步函数，调用 userManageDao.getUserInfo(userId) 来获取用户列表数据，并将结果返回
 

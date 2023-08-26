@@ -12,9 +12,9 @@
 
 
 const router = require('express').Router(); // 导入web服务器，创建路由器对象
-const userManageController = require('../controller/userManageController');//声明常数加载这个路径
+const calendarController = require('../controller/calendarController');//声明常数加载这个路径
 
 module.exports = router; //向外挂转对象
 
-router.post('/getUserList', userManageController.getUserList);// 获取用户列表
-router.post('/getUserInfo', userManageController.getUserInfo);// 获取用户信息
+router.post('/getSchoolCalendar', calendarController.getSchoolCalendar);// 获取用户列表
+router.post('/getSchoolDay', calendarController.getSchoolDay);// 获取用户信息

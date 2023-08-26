@@ -39,7 +39,7 @@ async function getUserList(req, res, next) {
  * @return {*}
  */
 async function getUserInfo(req, res, next) {
-    const userInfo = await userManageService.getUserInfo(req.body.date);
+    const userInfo = await userManageService.getUserInfo(req.body.userId);
     res.ResultVO(0, '获取获取用户信息成功', userInfo);
 }/*1、用async声明一个getUserInfo异步函数，调用 userManageService.getUserInfo(req.body.userId) 来获取指定用户的详细信息，并将结果赋值给 userInfo 变量
        这里的 res 参数是Express框架中的响应对象，通过调用 ResultVO 方法来返回结果给客户端。
