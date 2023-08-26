@@ -13,7 +13,7 @@
 
 const db = require('../utils/dbHelper_sqlite');
 
-// 获取用户列表
+// 获取校历列表
 exports.getSchoolCalendar = async () => {
     const sql = `
         SELECT academic_year,semester,which_week,which_day
@@ -22,7 +22,7 @@ exports.getSchoolCalendar = async () => {
     return await db.select(sql);
 };//导出用箭头函数的语法来定义的异步函数getSchoolCalendar，使用SQL查询了 school_calendar 表中的部分字段，使用 db.select(sql) 方法执行查询，并将结果返回
 
-// 获取用户详细信息
+// 获取日期详细信息
 exports.getSchoolDate = async (date) => {
     const sql = `
         SELECT
