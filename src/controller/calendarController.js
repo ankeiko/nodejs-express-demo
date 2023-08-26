@@ -11,11 +11,11 @@
 
 
 
-const userManageService = require('../service/userManageService');//声明常数加载这个路径
+const calendarService = require('../service/calendarService');//声明常数加载这个路径
 
 module.exports = {
-    getUserList,
-    getUserInfo
+    getSchoolCalendar,
+    getSchoolDay
 }//导出两个路由接口
 
 /******
@@ -25,9 +25,9 @@ module.exports = {
  * @param {*} //这个接口接受一个参数，参数类型可以是任意类型。 
  * @return {*}//这个接口的返回值类型是任意类型。
  */
-async function getUserList(req, res, next) {
-    const userList = await userManageService.getUserList();
-    res.ResultVO(0, '获取用户列表成功', userList);
+async function getSchoolCalendar(req, res, next) {
+    const calendar = await calendarService.getSchoolCalendar();
+    res.ResultVO(0, '获取校历成功', calendar);
 } /*1、用async声明一个getUserList异步函数，调用 userManageService.getUserList() 来获取用户列表数据，并将结果赋值给 userList 变量
        这里的 res 参数是Express框架中的响应对象，通过调用 ResultVO 方法来返回结果给客户端。
 */
@@ -38,9 +38,9 @@ async function getUserList(req, res, next) {
  * @param {*}
  * @return {*}
  */
-async function getUserInfo(req, res, next) {
-    const userInfo = await userManageService.getUserInfo(req.body.userId);
-    res.ResultVO(0, '获取获取用户信息成功', userInfo);
+async function getSchoolDay(req, res, next) {
+    const SchoolDay = await calendarService.getSchoolDay(req.body.date);
+    res.ResultVO(0, '获取校历日期成功', date);
 }/*1、用async声明一个getUserInfo异步函数，调用 userManageService.getUserInfo(req.body.userId) 来获取指定用户的详细信息，并将结果赋值给 userInfo 变量
        这里的 res 参数是Express框架中的响应对象，通过调用 ResultVO 方法来返回结果给客户端。
 */
