@@ -1,0 +1,13 @@
+### 获取校历
+POST http://127.0.0.1/api/calendar/getSchoolCalendar
+Content-Type: application/json
+
+
+
+### 获取日期
+POST http://127.0.0.1/api/calendar/getSchoolDay
+Content-Type: application/json
+
+{
+    "userId": "22201010002"
+}

@@ -14,28 +14,26 @@
 const db = require('../utils/dbHelper_sqlite');
 
 // 获取用户列表
-exports.getUserList = async () => {
+exports.getSchoolCalendar = async () => {
     const sql = `
-        SELECT
-            *
-        FROM
-            user_info
+        SELECT academic_year,semester,which_week,which_day
+        FROM school calendar
     `;
     return await db.select(sql);
 };//导出用箭头函数的语法来定义的异步函数getUserList，使用SQL查询了 user_info 表中的所有字段，使用 db.select(sql) 方法执行查询，并将结果返回
 
 // 获取用户详细信息
-exports.getUserInfo = async (userId) => {
+exports.getSchoolDate = async (date) => {
     const sql = `
         SELECT
             *
         FROM
-            user_info
+            school_calendar
         WHERE
-            user_id = ?
+            date = ?
     `;
     const sqlParams = [
-        userId
+        date
     ];
     return await db.select(sql, sqlParams);
 };//导出用箭头函数的语法来定义的异步函数getUserInfo，使用SQL查询了 user_info 表中的所有字段，并使用 WHERE 子句来筛选出指定 user_id 的记录。使用 db.select(sql, sqlParams) 方法执行查询，并将结果返回
